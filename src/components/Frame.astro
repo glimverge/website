@@ -1,6 +1,8 @@
 ---
-import { Folder01Icon, GithubIcon, Mail01Icon, Notebook01Icon, QuillWrite01Icon } from "@hugeicons/core-free-icons";
+import { Folder01Icon, Mail01Icon } from "@hugeicons/core-free-icons";
+import { siGithub, siJuejin, siXiaohongshu } from "simple-icons";
 import logo from "../assets/logo-full-transparent.svg";
+import BrandIcon from "./BrandIcon.astro";
 import Icon from "./Icon.astro";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -24,7 +26,7 @@ const navLink = "inline-flex items-center gap-1.5 text-[0.92rem] no-underline ho
 				项目
 			</a>
 			<a class:list={[navLink, "text-muted-foreground"]} href="https://github.com/glimverge">
-				<Icon icon={GithubIcon} />
+				<BrandIcon icon={siGithub} />
 				GitHub
 			</a>
 		</nav>
@@ -41,18 +43,18 @@ const navLink = "inline-flex items-center gap-1.5 text-[0.92rem] no-underline ho
 		</a>
 		<nav class="flex flex-wrap gap-x-[1.1rem] gap-y-1.5" aria-label="社交">
 			<a class="inline-flex items-center gap-1.5 no-underline" href="https://github.com/glimverge">
-				<Icon icon={GithubIcon} />
+				<BrandIcon icon={siGithub} />
 				GitHub
 			</a>
 			<a class="inline-flex items-center gap-1.5 no-underline" href="https://juejin.cn/user/4404007135100058">
-				<Icon icon={QuillWrite01Icon} />
+				<BrandIcon icon={siJuejin} />
 				掘金
 			</a>
 			<a
 				class="inline-flex items-center gap-1.5 no-underline"
 				href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231"
 			>
-				<Icon icon={Notebook01Icon} />
+				<BrandIcon icon={siXiaohongshu} />
 				小红书
 			</a>
 		</nav>
