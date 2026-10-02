@@ -4,7 +4,7 @@ import logo from "../assets/logo-full-transparent.svg";
 import Icon from "./Icon.astro";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
-const onProjects = here === "/projects" || here === "/moomem";
+const onProjects = here === "/projects" || here.startsWith("/projects/");
 const navLink = "inline-flex items-center gap-1.5 text-[0.92rem] no-underline hover:text-primary";
 ---
 
