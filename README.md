@@ -9,23 +9,6 @@
   <em>Where edges meet, glimmers emerge.</em>
 </p>
 
-<p align="center">
-  <a href="https://www.glimverge.com"><img alt="www.glimverge.com" src="https://img.shields.io/badge/site-www.glimverge.com-5b3ddb?style=flat-square" /></a>
-  <a href="https://github.com/glimverge/website/actions/workflows/deploy.yml"><img alt="Deploy" src="https://img.shields.io/github/actions/workflow/status/glimverge/website/deploy.yml?style=flat-square&label=deploy" /></a>
-  <img alt="Node.js >= 22.12" src="https://img.shields.io/badge/node-%3E%3D22.12-3c873a?style=flat-square&logo=nodedotjs&logoColor=white" />
-  <img alt="Astro 7" src="https://img.shields.io/badge/Astro-7-bc52ee?style=flat-square&logo=astro&logoColor=white" />
-  <img alt="Tailwind CSS 4" src="https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=flat-square&logo=tailwindcss&logoColor=white" />
-</p>
-
-<p align="center">
-  <a href="#概览">概览</a> ·
-  <a href="#本地开发">本地开发</a> ·
-  <a href="#目录">目录</a> ·
-  <a href="#部署">部署</a>
-</p>
-
-组织官网，线上地址 [www.glimverge.com](https://www.glimverge.com)。做极简、可靠的产品，持续探索技术前沿。名字由 Glimmer 与 Verge 拼合：Verge 是临界，Glimmer 是微光。
-
 ## 概览
 
 静态站点，用 [Astro](https://astro.build) 构建，样式走 [Tailwind CSS](https://tailwindcss.com) v4。页面文案直接写在 `.astro` 文件里，没有内容集合或后端。
