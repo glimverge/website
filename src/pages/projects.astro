@@ -1,0 +1,35 @@
+---
+import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
+import Frame from "../components/Frame.astro";
+import Icon from "../components/Icon.astro";
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+	{
+		href: "/moomem",
+		name: "moomem",
+		summary: "MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。",
+	},
+];
+---
+
+<Layout title="项目 — 临界微光" description="临界微光的项目。">
+	<Frame>
+		<h1 class="font-serif text-[clamp(2.4rem,6vw,3.15rem)] leading-[1.15] font-medium tracking-tight">项目</h1>
+		<ul class="mt-10 grid list-none gap-8 p-0">
+			{
+				projects.map((project) => (
+					<li>
+						<a class="group grid gap-1 text-inherit no-underline" href={project.href}>
+							<h2 class="flex items-center gap-1.5 text-[1.35rem] font-semibold tracking-tight group-hover:text-primary">
+								{project.name}
+								<Icon icon={ArrowUpRight01Icon} />
+							</h2>
+							<p class="text-muted-foreground">{project.summary}</p>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</Frame>
+</Layout>

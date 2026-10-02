@@ -4,8 +4,8 @@ import logo from "../assets/logo-full-transparent.svg";
 import Icon from "./Icon.astro";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
-const navLink =
-	"inline-flex items-center gap-1.5 text-[0.92rem] text-muted-foreground no-underline hover:text-primary aria-[current=page]:text-primary";
+const onProjects = here === "/projects" || here === "/moomem";
+const navLink = "inline-flex items-center gap-1.5 text-[0.92rem] no-underline hover:text-primary";
 ---
 
 <div class="mx-auto w-[min(40rem,calc(100%-2.5rem))] py-7 pb-18 max-sm:w-[min(40rem,calc(100%-2rem))] max-sm:pt-5">
@@ -15,11 +15,15 @@ const navLink =
 			<span>临界微光</span>
 		</a>
 		<nav class="flex gap-5" aria-label="站点">
-			<a class={navLink} href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>
+			<a
+				class:list={[navLink, onProjects ? "text-primary" : "text-muted-foreground"]}
+				href="/projects"
+				aria-current={here === "/projects" ? "page" : undefined}
+			>
 				<Icon icon={Folder01Icon} />
 				项目
 			</a>
-			<a class={navLink} href="https://github.com/glimverge">
+			<a class:list={[navLink, "text-muted-foreground"]} href="https://github.com/glimverge">
 				<Icon icon={GithubIcon} />
 				GitHub
 			</a>
