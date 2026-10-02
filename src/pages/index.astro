@@ -3,21 +3,26 @@ import { ArrowUpRight01Icon, Layers01Icon, WorkflowSquare01Icon } from "@hugeico
 import Frame from "../components/Frame.astro";
 import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
+
+const heading = "mb-3.5 text-[0.78rem] font-semibold tracking-[0.18em] text-primary";
+const title = "flex items-center gap-1.5 text-[1.05rem] font-semibold leading-snug";
 ---
 
 <Layout
 	description="临界有光，边界可通。做极简、可靠的产品，持续探索技术前沿。"
 >
 	<Frame>
-		<section class="hero">
-			<h1><span>临界有光，</span><span>边界可通</span></h1>
-			<p class="en">Where edges meet, glimmers emerge.</p>
-			<p class="lead">做极简、可靠的产品，持续探索技术前沿。</p>
+		<section class="mt-15 max-sm:mt-12">
+			<h1 class="font-serif text-[clamp(2.6rem,7vw,3.5rem)] leading-[1.15] font-medium tracking-tight">
+				<span class="max-[480px]:block">临界有光，</span><span class="max-[480px]:block">边界可通</span>
+			</h1>
+			<p class="mt-1.5 font-serif text-[1.02rem] text-faint italic">Where edges meet, glimmers emerge.</p>
+			<p class="mt-6 max-w-md text-muted-foreground">做极简、可靠的产品，持续探索技术前沿。</p>
 		</section>
 
-		<section>
-			<h2>关于</h2>
-			<p class="about">
+		<section class="mt-15 max-sm:mt-12">
+			<h2 class={heading}>关于</h2>
+			<p class="max-w-xl">
 				名字由 Glimmer 与 Verge 拼合而来。Verge
 				指临界，站在突破的边缘；Glimmer
 				是微光，寻求突破的那一缕契机。工作站在突破的边缘上，以探索未知、寻求契机为主。AI
@@ -25,36 +30,38 @@ import Layout from "../layouts/Layout.astro";
 			</p>
 		</section>
 
-		<section>
-			<h2>方向</h2>
-			<ul class="directions">
-				<li>
-					<h3>
+		<section class="mt-15 max-sm:mt-12">
+			<h2 class={heading}>方向</h2>
+			<ul class="grid list-none gap-[1.15rem] p-0">
+				<li class="grid grid-cols-1 items-baseline gap-0.5 sm:grid-cols-[10.5rem_1fr] sm:gap-5">
+					<h3 class={title}>
 						<Icon icon={WorkflowSquare01Icon} />
 						AI 与工作流
 					</h3>
-					<p>
-						<span>将新能力纳入真实工作流，</span><span>试出可促成突破的路径。</span>
+					<p class="text-muted-foreground">
+						<span class="max-sm:block">将新能力纳入真实工作流，</span><span class="max-sm:block"
+							>试出可促成突破的路径。</span
+						>
 					</p>
 				</li>
-				<li>
-					<h3>
+				<li class="grid grid-cols-1 items-baseline gap-0.5 sm:grid-cols-[10.5rem_1fr] sm:gap-5">
+					<h3 class={title}>
 						<Icon icon={Layers01Icon} />
 						全栈工程
 					</h3>
-					<p>从前端到后端贯通实现，让试探能够持续落地。</p>
+					<p class="text-muted-foreground">从前端到后端贯通实现，让试探能够持续落地。</p>
 				</li>
 			</ul>
 		</section>
 
-		<section>
-			<h2>项目</h2>
-			<a class="project-entry" href="/moomem">
-				<h3>
+		<section class="mt-15 max-sm:mt-12">
+			<h2 class={heading}>项目</h2>
+			<a class="group grid gap-1 text-inherit no-underline" href="/moomem">
+				<h3 class="flex items-center gap-1.5 text-[1.35rem] font-semibold tracking-tight group-hover:text-primary">
 					moomem
 					<Icon icon={ArrowUpRight01Icon} />
 				</h3>
-				<p>MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。</p>
+				<p class="text-muted-foreground">MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。</p>
 			</a>
 		</section>
 	</Frame>

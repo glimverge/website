@@ -4,20 +4,22 @@ import logo from "../assets/logo-full-transparent.svg";
 import Icon from "./Icon.astro";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
+const navLink =
+	"inline-flex items-center gap-1.5 text-[0.92rem] text-muted-foreground no-underline hover:text-primary aria-[current=page]:text-primary";
 ---
 
-<div class="page">
-	<header class="site-header">
-		<a class="brand" href="/">
-			<img src={logo.src} width="32" height="28" alt="" />
+<div class="mx-auto w-[min(40rem,calc(100%-2.5rem))] py-7 pb-18 max-sm:w-[min(40rem,calc(100%-2rem))] max-sm:pt-5">
+	<header class="mb-18 flex items-center justify-between gap-4 max-sm:mb-13">
+		<a class="inline-flex items-center gap-3 font-medium text-inherit no-underline" href="/">
+			<img class="block h-auto w-8" src={logo.src} width="32" height="28" alt="" />
 			<span>临界微光</span>
 		</a>
-		<nav class="header-nav" aria-label="站点">
-			<a href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>
+		<nav class="flex gap-5" aria-label="站点">
+			<a class={navLink} href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>
 				<Icon icon={Folder01Icon} />
 				项目
 			</a>
-			<a href="https://github.com/glimverge">
+			<a class={navLink} href="https://github.com/glimverge">
 				<Icon icon={GithubIcon} />
 				GitHub
 			</a>
@@ -28,25 +30,28 @@ const here = Astro.url.pathname.replace(/\/$/, "") || "/";
 		<slot />
 	</main>
 
-	<footer class="site-footer">
-		<a href="mailto:hello@glimverge.com">
+	<footer class="mt-18 flex flex-col items-start gap-3.5 border-t border-border pt-6 text-[0.92rem] text-muted-foreground">
+		<a class="inline-flex items-center gap-1.5 no-underline" href="mailto:hello@glimverge.com">
 			<Icon icon={Mail01Icon} />
 			hello@glimverge.com
 		</a>
-		<nav aria-label="社交">
-			<a href="https://github.com/glimverge">
+		<nav class="flex flex-wrap gap-x-[1.1rem] gap-y-1.5" aria-label="社交">
+			<a class="inline-flex items-center gap-1.5 no-underline" href="https://github.com/glimverge">
 				<Icon icon={GithubIcon} />
 				GitHub
 			</a>
-			<a href="https://juejin.cn/user/4404007135100058">
+			<a class="inline-flex items-center gap-1.5 no-underline" href="https://juejin.cn/user/4404007135100058">
 				<Icon icon={QuillWrite01Icon} />
 				掘金
 			</a>
-			<a href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231">
+			<a
+				class="inline-flex items-center gap-1.5 no-underline"
+				href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231"
+			>
 				<Icon icon={Notebook01Icon} />
 				小红书
 			</a>
 		</nav>
-		<p class="colophon">于细微处，见临界通</p>
+		<p class="font-serif text-faint italic">于细微处，见临界通</p>
 	</footer>
 </div>

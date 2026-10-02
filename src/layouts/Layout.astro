@@ -15,7 +15,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="bg-background scheme-light">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,7 +32,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 		<meta property="og:locale" content="zh_CN" />
 		<meta name="theme-color" content="#f7f6f3" />
 	</head>
-	<body>
+	<body class="bg-background font-sans text-[17px] leading-[1.7] text-foreground text-pretty antialiased">
 		<slot />
 	</body>
 </html>
