@@ -93,7 +93,15 @@ a:hover {
   gap: 1.25rem;
 }
 
+.icon {
+  display: block;
+  flex: none;
+}
+
 .header-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   color: var(--muted);
   font-size: 0.92rem;
   text-decoration: none;
@@ -154,6 +162,9 @@ h2 {
 }
 
 h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 1.05rem;
   font-weight: 620;
   line-height: 1.4;
@@ -173,7 +184,7 @@ h3 {
 
 .directions li {
   display: grid;
-  grid-template-columns: 7.25rem 1fr;
+  grid-template-columns: 10.5rem 1fr;
   gap: 1.25rem;
   align-items: baseline;
 }
@@ -232,19 +243,13 @@ h3 {
 }
 
 .traits li {
-  padding-left: 0.9rem;
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
 }
 
-.traits li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.72em;
-  width: 0.35rem;
-  height: 0.35rem;
-  border-radius: 50%;
-  background: #6adcba;
+.traits .icon {
+  margin-top: 0.28em;
 }
 
 .project-links {
@@ -254,6 +259,9 @@ h3 {
 }
 
 .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-weight: 560;
 }
 
@@ -269,6 +277,9 @@ h3 {
 }
 
 .site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   text-decoration: none;
 }
 

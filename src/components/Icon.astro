@@ -1,0 +1,37 @@
+---
+interface Props {
+	icon: ReadonlyArray<readonly [string, Readonly<Record<string, string | number>>]>;
+	size?: number;
+}
+
+const { icon, size = 18 } = Astro.props;
+
+function kebab(name: string) {
+	return name.replace(/[A-Z]/g, (char) => `-${char.toLowerCase()}`);
+}
+
+function escapeAttr(value: string | number) {
+	return String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;");
+}
+
+const markup = icon
+	.map(([tag, attrs]) => {
+		const rendered = Object.entries(attrs)
+			.filter(([key]) => key !== "key")
+			.map(([key, value]) => `${kebab(key)}="${escapeAttr(value)}"`)
+			.join(" ");
+		return `<${tag} ${rendered}></${tag}>`;
+	})
+	.join("");
+---
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	viewBox="0 0 24 24"
+	fill="none"
+	aria-hidden="true"
+	class="icon"
+	set:html={markup}
+/>

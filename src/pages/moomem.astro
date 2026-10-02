@@ -1,5 +1,15 @@
 ---
+import {
+	BookOpen01Icon,
+	Brain01Icon,
+	CloudOffIcon,
+	DatabaseSync01Icon,
+	Search01Icon,
+	Share01Icon,
+	SourceCodeIcon,
+} from "@hugeicons/core-free-icons";
 import Frame from "../components/Frame.astro";
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -19,15 +29,36 @@ import Layout from "../layouts/Layout.astro";
 				上把记忆写进本地目录，关掉再打开还能召回。
 			</p>
 			<ul class="traits">
-				<li>open、add、recall、forget</li>
-				<li>导入、导出与统计</li>
-				<li>向量与 BM25 混合检索，索引按用户分开</li>
-				<li>双槽快照，写入中途崩溃仍可恢复</li>
-				<li>缺省离线，不需要 API Key</li>
+				<li>
+					<Icon icon={Brain01Icon} />
+					<span>open、add、recall、forget</span>
+				</li>
+				<li>
+					<Icon icon={Share01Icon} />
+					<span>导入、导出与统计</span>
+				</li>
+				<li>
+					<Icon icon={Search01Icon} />
+					<span>向量与 BM25 混合检索，索引按用户分开</span>
+				</li>
+				<li>
+					<Icon icon={DatabaseSync01Icon} />
+					<span>双槽快照，写入中途崩溃仍可恢复</span>
+				</li>
+				<li>
+					<Icon icon={CloudOffIcon} />
+					<span>缺省离线，不需要 API Key</span>
+				</li>
 			</ul>
 			<p class="project-links">
-				<a href="https://github.com/glimverge/moomem">源码</a>
-				<a href="https://mooncakes.io/docs/heyq02/moomem">文档</a>
+				<a href="https://github.com/glimverge/moomem">
+					<Icon icon={SourceCodeIcon} />
+					源码
+				</a>
+				<a href="https://mooncakes.io/docs/heyq02/moomem">
+					<Icon icon={BookOpen01Icon} />
+					文档
+				</a>
 			</p>
 		</article>
 	</Frame>

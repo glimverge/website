@@ -6,6 +6,12 @@
       "sourceType": "github",
       "skillPath": "skills/hugeicons/SKILL.md",
       "computedHash": "4e65a89ca4417259b58c4e5c079d83fb977da214028334f504f18af820bbadcf"
+    },
+    "tailwind-design-system": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
+      "computedHash": "4e5bfe5af9b5da504752432dc45ed605af350cf1489a58419afad4123a514f89"
     }
   }
 }

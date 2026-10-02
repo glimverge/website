@@ -1,5 +1,7 @@
 ---
+import { Folder01Icon, GithubIcon, Mail01Icon, Notebook01Icon, QuillWrite01Icon } from "@hugeicons/core-free-icons";
 import logo from "../assets/logo-full-transparent.svg";
+import Icon from "./Icon.astro";
 
 const here = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
@@ -11,8 +13,14 @@ const here = Astro.url.pathname.replace(/\/$/, "") || "/";
 			<span>临界微光</span>
 		</a>
 		<nav class="header-nav" aria-label="站点">
-			<a href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>项目</a>
-			<a href="https://github.com/glimverge">GitHub</a>
+			<a href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>
+				<Icon icon={Folder01Icon} />
+				项目
+			</a>
+			<a href="https://github.com/glimverge">
+				<Icon icon={GithubIcon} />
+				GitHub
+			</a>
 		</nav>
 	</header>
 
@@ -21,11 +29,23 @@ const here = Astro.url.pathname.replace(/\/$/, "") || "/";
 	</main>
 
 	<footer class="site-footer">
-		<a href="mailto:hello@glimverge.com">hello@glimverge.com</a>
+		<a href="mailto:hello@glimverge.com">
+			<Icon icon={Mail01Icon} />
+			hello@glimverge.com
+		</a>
 		<nav aria-label="社交">
-			<a href="https://github.com/glimverge">GitHub</a>
-			<a href="https://juejin.cn/user/4404007135100058">掘金</a>
-			<a href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231">小红书</a>
+			<a href="https://github.com/glimverge">
+				<Icon icon={GithubIcon} />
+				GitHub
+			</a>
+			<a href="https://juejin.cn/user/4404007135100058">
+				<Icon icon={QuillWrite01Icon} />
+				掘金
+			</a>
+			<a href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231">
+				<Icon icon={Notebook01Icon} />
+				小红书
+			</a>
 		</nav>
 		<p class="colophon">于细微处，见临界通</p>
 	</footer>

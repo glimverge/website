@@ -1,5 +1,7 @@
 ---
+import { ArrowUpRight01Icon, Layers01Icon, WorkflowSquare01Icon } from "@hugeicons/core-free-icons";
 import Frame from "../components/Frame.astro";
+import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -27,13 +29,19 @@ import Layout from "../layouts/Layout.astro";
 			<h2>方向</h2>
 			<ul class="directions">
 				<li>
-					<h3>AI 与工作流</h3>
+					<h3>
+						<Icon icon={WorkflowSquare01Icon} />
+						AI 与工作流
+					</h3>
 					<p>
 						<span>将新能力纳入真实工作流，</span><span>试出可促成突破的路径。</span>
 					</p>
 				</li>
 				<li>
-					<h3>全栈工程</h3>
+					<h3>
+						<Icon icon={Layers01Icon} />
+						全栈工程
+					</h3>
 					<p>从前端到后端贯通实现，让试探能够持续落地。</p>
 				</li>
 			</ul>
@@ -42,7 +50,10 @@ import Layout from "../layouts/Layout.astro";
 		<section>
 			<h2>项目</h2>
 			<a class="project-entry" href="/moomem">
-				<h3>moomem</h3>
+				<h3>
+					moomem
+					<Icon icon={ArrowUpRight01Icon} />
+				</h3>
 				<p>MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。</p>
 			</a>
 		</section>
