@@ -1,0 +1,32 @@
+---
+import logo from "../assets/logo-full-transparent.svg";
+
+const here = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<div class="page">
+	<header class="site-header">
+		<a class="brand" href="/">
+			<img src={logo.src} width="32" height="28" alt="" />
+			<span>临界微光</span>
+		</a>
+		<nav class="header-nav" aria-label="站点">
+			<a href="/moomem" aria-current={here === "/moomem" ? "page" : undefined}>项目</a>
+			<a href="https://github.com/glimverge">GitHub</a>
+		</nav>
+	</header>
+
+	<main>
+		<slot />
+	</main>
+
+	<footer class="site-footer">
+		<a href="mailto:hello@glimverge.com">hello@glimverge.com</a>
+		<nav aria-label="社交">
+			<a href="https://github.com/glimverge">GitHub</a>
+			<a href="https://juejin.cn/user/4404007135100058">掘金</a>
+			<a href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231">小红书</a>
+		</nav>
+		<p class="colophon">于细微处，见临界通</p>
+	</footer>
+</div>

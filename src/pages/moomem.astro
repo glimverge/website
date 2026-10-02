@@ -1,0 +1,34 @@
+---
+import Frame from "../components/Frame.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="moomem — 临界微光"
+	description="MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。"
+>
+	<Frame>
+		<article class="project">
+			<h1>moomem</h1>
+			<p class="project-kicker">
+				<span>MoonBit 嵌入式 Agent 记忆层。</span>
+				<span>零部署、崩溃可恢复、按用户隔离。</span>
+			</p>
+			<p>
+				Agent 进程一结束就失忆。moomem 嵌在宿主进程里，不用单独起服务。native
+				上把记忆写进本地目录，关掉再打开还能召回。
+			</p>
+			<ul class="traits">
+				<li>open、add、recall、forget</li>
+				<li>导入、导出与统计</li>
+				<li>向量与 BM25 混合检索，索引按用户分开</li>
+				<li>双槽快照，写入中途崩溃仍可恢复</li>
+				<li>缺省离线，不需要 API Key</li>
+			</ul>
+			<p class="project-links">
+				<a href="https://github.com/glimverge/moomem">源码</a>
+				<a href="https://mooncakes.io/docs/heyq02/moomem">文档</a>
+			</p>
+		</article>
+	</Frame>
+</Layout>

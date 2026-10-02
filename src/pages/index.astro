@@ -1,92 +1,50 @@
 ---
-import logo from "../assets/logo-full-transparent.svg";
+import Frame from "../components/Frame.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
 ---
 
 <Layout
 	description="临界有光，边界可通。做极简、可靠的产品，持续探索技术前沿。"
 >
-	<div class="page">
-		<header class="site-header">
-			<a class="brand" href="/">
-				<img src={logo.src} width="32" height="28" alt="" />
-				<span>临界微光</span>
-			</a>
-			<a class="header-link" href="https://github.com/glimverge">GitHub</a>
-		</header>
+	<Frame>
+		<section class="hero">
+			<h1><span>临界有光，</span><span>边界可通</span></h1>
+			<p class="en">Where edges meet, glimmers emerge.</p>
+			<p class="lead">做极简、可靠的产品，持续探索技术前沿。</p>
+		</section>
 
-		<main>
-			<section class="hero">
-				<h1><span>临界有光，</span><span>边界可通</span></h1>
-				<p class="en">Where edges meet, glimmers emerge.</p>
-				<p class="lead">做极简、可靠的产品，持续探索技术前沿。</p>
-			</section>
+		<section>
+			<h2>关于</h2>
+			<p class="about">
+				名字由 Glimmer 与 Verge 拼合而来。Verge
+				指临界，站在突破的边缘；Glimmer
+				是微光，寻求突破的那一缕契机。工作站在突破的边缘上，以探索未知、寻求契机为主。AI
+				与全栈是手段。
+			</p>
+		</section>
 
-			<section>
-				<h2>关于</h2>
-				<p class="about">
-					名字由 Glimmer 与 Verge 拼合而来。Verge
-					指临界，站在突破的边缘；Glimmer
-					是微光，寻求突破的那一缕契机。工作站在突破的边缘上，以探索未知、寻求契机为主。AI
-					与全栈是手段。
-				</p>
-			</section>
-
-			<section>
-				<h2>方向</h2>
-				<ul class="directions">
-					<li>
-						<h3>AI 与工作流</h3>
-						<p>
-							<span>将新能力纳入真实工作流，</span><span>试出可促成突破的路径。</span>
-						</p>
-					</li>
-					<li>
-						<h3>全栈工程</h3>
-						<p>从前端到后端贯通实现，让试探能够持续落地。</p>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>项目</h2>
-				<article class="project">
-					<h3 class="project-name">moomem</h3>
-					<p class="project-kicker">
-						<span>MoonBit 嵌入式 Agent 记忆层。</span>
-						<span>零部署、崩溃可恢复、按用户隔离。</span>
-					</p>
+		<section>
+			<h2>方向</h2>
+			<ul class="directions">
+				<li>
+					<h3>AI 与工作流</h3>
 					<p>
-						Agent 进程一结束就失忆。moomem
-						嵌在宿主进程里，不用单独起服务。native
-						上把记忆写进本地目录，关掉再打开还能召回。
+						<span>将新能力纳入真实工作流，</span><span>试出可促成突破的路径。</span>
 					</p>
-					<ul class="traits">
-						<li>open、add、recall、forget</li>
-						<li>导入、导出与统计</li>
-						<li>向量与 BM25 混合检索，索引按用户分开</li>
-						<li>双槽快照，写入中途崩溃仍可恢复</li>
-						<li>缺省离线，不需要 API Key</li>
-					</ul>
-					<p class="project-links">
-						<a href="https://github.com/glimverge/moomem">源码</a>
-						<a href="https://mooncakes.io/docs/heyq02/moomem">文档</a>
-					</p>
-				</article>
-			</section>
-		</main>
+				</li>
+				<li>
+					<h3>全栈工程</h3>
+					<p>从前端到后端贯通实现，让试探能够持续落地。</p>
+				</li>
+			</ul>
+		</section>
 
-		<footer class="site-footer">
-			<a href="mailto:hello@glimverge.com">hello@glimverge.com</a>
-			<nav aria-label="社交">
-				<a href="https://github.com/glimverge">GitHub</a>
-				<a href="https://juejin.cn/user/4404007135100058">掘金</a>
-				<a href="https://www.xiaohongshu.com/user/profile/68fdd72c0000000037005231"
-					>小红书</a
-				>
-			</nav>
-			<p class="colophon">于细微处，见临界通</p>
-		</footer>
-	</div>
+		<section>
+			<h2>项目</h2>
+			<a class="project-entry" href="/moomem">
+				<h3>moomem</h3>
+				<p>MoonBit 嵌入式 Agent 记忆层。零部署、崩溃可恢复、按用户隔离。</p>
+			</a>
+		</section>
+	</Frame>
 </Layout>
